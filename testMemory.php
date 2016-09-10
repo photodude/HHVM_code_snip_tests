@@ -1,7 +1,9 @@
 <?php
 $var1 = array();
+$prePop = 1000000;
 
-for ($i = 0; $i < 154619; $i++)
+
+for ($i = 0; $i < $prePop; $i++)
 {
 	$var1[] = "this is a short string";
 }
@@ -9,7 +11,8 @@ for ($i = 0; $i < 154619; $i++)
 for ($i = 0; $i < PHP_INT_MAX - 10000; $i++)
 {
 	$var1[] = "this is a short string";
-	echo "Memory usage for $i elements = " . memory_get_usage() / 1048576 . " MB\n";
+	$e = $prePop + $i;
+	echo "Memory usage for $e elements = " . memory_get_usage() / 1048576 . " MB\n";
 }
 
 while ($i = sizeof($var1))
