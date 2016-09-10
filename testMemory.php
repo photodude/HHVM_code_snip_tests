@@ -1,4 +1,4 @@
-<? php
+<?php
 $var1 = array();
 
 for ($i = 0; $i < PHP_INT_MAX - 10000; $i++)
