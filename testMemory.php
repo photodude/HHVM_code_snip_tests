@@ -1,6 +1,6 @@
 <?php
 $var1 = array();
-$prePop = 268036506;
+$prePop = 368036506;
 
 
 for ($i = 0; $i < $prePop; $i++)
@@ -17,7 +17,7 @@ for ($i = 0; $i < PHP_INT_MAX - 10000; $i++)
 
 	if ($i = $r + 1000)
 	{
-		echo "Memory usage for $e elements = " . memory_get_usage() / 1048576 . " MB\n";
+		//echo "Memory usage for $e elements = " . memory_get_usage() / 1048576 . " MB\n";
 		$r = $i;
 		echo "Maximum Memory usage at $e elements is = " . memory_get_peak_usage(true) / 1048576 . " MB\n";
 	}
