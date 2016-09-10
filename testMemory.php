@@ -14,10 +14,12 @@ for ($i = 0; $i < PHP_INT_MAX - 10000; $i++)
 {
 	$var1[] = "this is a short string";
 	$e = $prePop + $i;
+
 	if ($i = $r + 1000)
 	{
 		echo "Memory usage for $e elements = " . memory_get_usage() / 1048576 . " MB\n";
 		$r = $i;
+		echo "Maximum Memory usage at $e elements is = " . memory_get_peak_usage(true) / 1048576 . " MB\n";
 	}
 }
 
@@ -30,6 +32,7 @@ while ($i = sizeof($var1))
 		echo "Memory usage for $e elements = " . memory_get_usage() / 1048576 . " MB\n";
 		$r = $i;
 	}
+
 	unset($var1[$i -1]);
 }
 	echo "Maximum Memory usage = " . memory_get_peak_usage(true) / 1048576 . " MB\n";
