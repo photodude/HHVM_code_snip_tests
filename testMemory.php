@@ -1,6 +1,11 @@
 <?php
 $var1 = array();
 
+for ($i = 0; $i < 154619; $i++)
+{
+	$var1[] = "this is a short string";
+}
+
 for ($i = 0; $i < PHP_INT_MAX - 10000; $i++)
 {
 	$var1[] = "this is a short string";
