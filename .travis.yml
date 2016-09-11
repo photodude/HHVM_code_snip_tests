@@ -61,6 +61,8 @@ services:
 before_script:
   # Make sure all dev dependencies are installed
   - composer install
+  - composer update
+  - composer dump-autoload
   - if [[ $HHVMPHP7 == "yes" ]]; then echo hhvm.php7.all=1 >> /etc/hhvm/php.ini; fi
 
 script:
