@@ -15,7 +15,7 @@ for ($i = 0; $i < PHP_INT_MAX - 10000; $i++)
 	$var1[] = "this is a short string";
 	$e = $prePop + $i;
 
-	if ($i = $r + 10000000000000)
+	if ($i = $r + 100000000000000000)
 	{
 		echo "Memory usage for $e elements = " . memory_get_usage() / 1048576 . " MB\n";
 		$r = $i;
