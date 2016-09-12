@@ -1,4 +1,5 @@
 <?php
+require __DIR__ . '/vendor/autoload.php';
 PHP_Timer::start();
 $var1 = array();
 $prePop = 268036506;
