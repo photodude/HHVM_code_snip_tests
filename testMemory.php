@@ -1,6 +1,6 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
-echo ini_get("memory_limit") / 1048576 . " MB\n";
+echo "Memory is = " . ini_get("memory_limit") / 1048576 . " MB\n";
 PHP_Timer::start();
 $var1 = array();
 $prePop = 268036506;
@@ -20,7 +20,7 @@ for ($i = 0; $i < PHP_INT_MAX - 10000; $i++)
 
 	if ($i = $r + 100000000000000000)
 	{
-		echo PHP_Timer::resourceUsage();
+		echo PHP_Timer::resourceUsage() . "\n";
 		echo "Memory usage for $e elements = " . memory_get_usage() / 1048576 . " MB\n";
 		$r = $i;
 		// echo "Maximum Memory usage at $e elements is = " . memory_get_peak_usage(true) / 1048576 . " MB\n";
