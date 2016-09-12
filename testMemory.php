@@ -1,6 +1,6 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
-echo ini_get("memory_limit");
+echo ini_get("memory_limit") / 1048576 . " MB\n";
 PHP_Timer::start();
 $var1 = array();
 $prePop = 268036506;
