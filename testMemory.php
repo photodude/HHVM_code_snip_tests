@@ -33,7 +33,7 @@ class Right {
 $iter = 0;
 while (true) {
    $left = new Left();
-   $right = new Right();
+   $right = new Right(100);
    $left->right = $right;
    $right->left = $left;
    $iter++;
