@@ -10,7 +10,25 @@ class Left {
 }
 class Right {
    public $left;
-   public $two = 1;
+      private $_instance_params = array(
+        'type' => 'default_type',
+        'width' => 100,
+        'interactive' => true
+    );
+
+    function __construct($args){
+        $this->_instance_params = array_merge_recursive($this->_instance_params, $args);
+    }
+
+    public function __get($name)
+    {
+        return $this->_instance_params[$name];
+    }
+
+    public function __set($name, $value)
+    {
+        $this->_instance_params[$name] = $value;
+    }
 }
 $iter = 0;
 while (true) {
