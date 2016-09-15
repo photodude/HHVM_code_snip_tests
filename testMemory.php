@@ -4,28 +4,21 @@ require __DIR__ . '/vendor/autoload.php';
 echo "Memory is = " . ini_get("memory_limit") / 1048576 . " MB\n";
 PHP_Timer::start();
 
-class Left {
-   public $right;
-}
-
-class Right {
-   public $left;
+class One {
+   public $one = 1;
 }
 
 $iter = 0;
 while (true) {
-   $left = new Left();
-   $right = new Right();
-   $left->right = $right;
-   $right->left = $left;
+   $one = new One();
    $iter++;
    if ($iter % 1000000 === 0) {
       $formattedIter = number_format($iter, 0);
       $memoryUsage = memory_get_peak_usage(true) / (1024 * 1024);
       echo "Survived {$formattedIter} iterations: {$memoryUsage}MB used\n";
-      echo "resource useage" . PHP_Timer::resourceUsage() . "\n";
    }
 }
+
 
 //$var1 = array();
 //$prePop = 268036506;
