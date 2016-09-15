@@ -13,10 +13,11 @@ class Right {
       private $_instance_params = array(
         'type' => 'default_type',
         'width' => 100,
-        'interactive' => true
+        'interactive' => true,
+        'nullable_par' => null,
     );
 
-    function __construct($args){
+    function __construct($args = array()){
         $this->_instance_params = array_merge_recursive($this->_instance_params, $args);
     }
 
@@ -30,13 +31,17 @@ class Right {
         $this->_instance_params[$name] = $value;
     }
 }
+
 $iter = 0;
+
 while (true) {
    $left = new Left();
-   $right = new Right(array("Volvo", "BMW", "Toyota"));
+   $junk = array("Volvo", "BMW", "Toyota",'CCNumber', 'ExpMonth', 'ExpYear', 'CV3', 'CardType',);
+   $right = new Right();
    $left->right = $right;
    $right->left = $left;
    $iter++;
+
    if ($iter % 1000000 === 0) {
       $formattedIter = number_format($iter, 0);
       $memoryUsage = memory_get_peak_usage(true) / (1024 * 1024);
