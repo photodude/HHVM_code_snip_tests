@@ -4,13 +4,20 @@ require __DIR__ . '/vendor/autoload.php';
 echo "Memory is = " . ini_get("memory_limit") / 1048576 . " MB\n";
 PHP_Timer::start();
 
-class One {
+class Left {
+   public $right;
    public $one = 1;
 }
-
+class Right {
+   public $left;
+   public $two = 1;
+}
 $iter = 0;
 while (true) {
-   $one = new One();
+   $left = new Left();
+   $right = new Right();
+   $left->right = $right;
+   $right->left = $left;
    $iter++;
    if ($iter % 1000000 === 0) {
       $formattedIter = number_format($iter, 0);
