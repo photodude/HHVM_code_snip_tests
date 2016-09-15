@@ -16,6 +16,7 @@ while (true) {
       $formattedIter = number_format($iter, 0);
       $memoryUsage = memory_get_peak_usage(true) / (1024 * 1024);
       echo "Survived {$formattedIter} iterations: {$memoryUsage}MB used\n";
+      echo "resource useage" . PHP_Timer::resourceUsage() . "\n";
    }
 }
 
