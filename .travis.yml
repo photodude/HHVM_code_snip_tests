@@ -9,7 +9,7 @@ matrix:
     - php: 5.6
     #- php: 7.0
     - php: 7.1
-    - nightly
+    - php: nightly
 # current is 3.15 dev
     - php: hhvm
       sudo: true
