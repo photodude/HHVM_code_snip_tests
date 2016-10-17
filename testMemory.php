@@ -33,7 +33,7 @@ class Right {
 }
 
 $iter = 0;
-
+/*
 while (true) {
    $left = new Left();
    $junk = array("Volvo", "BMW", "Toyota",'CCNumber', 'ExpMonth', 'ExpYear', 'CV3', 'CardType',);
@@ -49,43 +49,43 @@ while (true) {
       echo "resource useage" . PHP_Timer::resourceUsage() . "\n";
    }
 }
+*/
+
+$var1 = array();
+$prePop = 277558407;
 
 
-//$var1 = array();
-//$prePop = 268036506;
-//
-//
-//for ($i = 0; $i < $prePop; $i++)
-//{
-//	$var1[] = "this is a short string";
-//}
-//
-//$r = 0;
-//
-//for ($i = 0; $i < PHP_INT_MAX - 10000; $i++)
-//{
-//	$var1[] = "this is a short string";
-//	$e = $prePop + $i;
-//
-//	if ($i = $r + 100000000000000000)
-//	{
-//		echo PHP_Timer::resourceUsage() . "\n";
-//		echo "Memory usage for $e elements = " . memory_get_usage() / 1048576 . " MB\n";
-//		$r = $i;
-//		// echo "Maximum Memory usage at $e elements is = " . memory_get_peak_usage(true) / 1048576 . " MB\n";
-//	}
-//}
-//
-//$r = sizeof($var1);
-//
-//while ($i = sizeof($var1))
-//{
-//	if ($i = $r - 100 || $r < 100)
-//	{
-//		echo "Memory usage for $e elements = " . memory_get_usage() / 1048576 . " MB\n";
-//		$r = $i;
-//	}
-//
-//	unset($var1[$i -1]);
-//}
-//	echo "Maximum Memory usage = " . memory_get_peak_usage(true) / 1048576 . " MB\n";
+for ($i = 0; $i < $prePop; $i++)
+{
+	$var1[] = "this is a short string";
+}
+
+$r = 0;
+
+for ($i = 0; $i < PHP_INT_MAX - 10000; $i++)
+{
+	$var1[] = "this is a short string";
+	$e = $prePop + $i;
+
+	if ($i = $r + 100000000000000000)
+	{
+		echo PHP_Timer::resourceUsage() . "\n";
+		echo "Memory usage for $e elements = " . memory_get_usage() / 1048576 . " MB\n";
+		$r = $i;
+		// echo "Maximum Memory usage at $e elements is = " . memory_get_peak_usage(true) / 1048576 . " MB\n";
+	}
+}
+
+$r = sizeof($var1);
+
+while ($i = sizeof($var1))
+{
+	if ($i = $r - 100 || $r < 100)
+	{
+		echo "Memory usage for $e elements = " . memory_get_usage() / 1048576 . " MB\n";
+		$r = $i;
+	}
+
+	unset($var1[$i -1]);
+}
+	echo "Maximum Memory usage = " . memory_get_peak_usage(true) / 1048576 . " MB\n";
