@@ -15,69 +15,21 @@ matrix:
       sudo: true
       dist: trusty
       group: edge # until the next update
-      addons:
-        apt:
-          packages:
-            - mysql-server-5.6
-            - mysql-client-core-5.6
-            - mysql-client-5.6
-      services:
-        - mysql
-        - postgresql
-        - memcache
-        - memcached
-        - redis-server
       env: HHVMPHP7="no"
     - php: hhvm
       sudo: true
       dist: trusty
       group: edge # until the next update
-      addons:
-        apt:
-          packages:
-            - mysql-server-5.6
-            - mysql-client-core-5.6
-            - mysql-client-5.6
-      services:
-        - mysql
-        - postgresql
-        - memcache
-        - memcached
-        - redis-server
       env: HHVMPHP7="yes"
     - php: hhvm-nightly
       sudo: true
       dist: trusty
       group: edge # until the next update
-      addons:
-        apt:
-          packages:
-            - mysql-server-5.6
-            - mysql-client-core-5.6
-            - mysql-client-5.6
-      services:
-        - mysql
-        - postgresql
-        - memcache
-        - memcached
-        - redis-server
       env: HHVMPHP7="no"
     - php: hhvm-nightly
       sudo: true
       dist: trusty
       group: edge # until the next update
-      addons:
-        apt:
-          packages:
-            - mysql-server-5.6
-            - mysql-client-core-5.6
-            - mysql-client-5.6
-      services:
-        - mysql
-        - postgresql
-        - memcache
-        - memcached
-        - redis-server
       env: HHVMPHP7="yes"
   allow_failures:
     - php: hhvm
