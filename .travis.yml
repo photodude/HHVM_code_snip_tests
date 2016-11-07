@@ -101,6 +101,8 @@ before_script:
   - if [[ $HHVMPHP7 == "yes" ]]; then echo hhvm.php7.all=1 >> /etc/hhvm/php.ini; fi
 
 script:
-  - if [[ $TRAVIS_PHP_VERSION != hhv* ]]; then php testAutoloaders.php; fi
-  - if [[ $TRAVIS_PHP_VERSION = hhv* ]]; then hhvm --php testAutoloaders.php; fi
+  #- if [[ $TRAVIS_PHP_VERSION != hhv* ]]; then php testAutoloaders.php; fi
+  #- if [[ $TRAVIS_PHP_VERSION = hhv* ]]; then hhvm --php testAutoloaders.php; fi
+  - if [[ $TRAVIS_PHP_VERSION != hhv* ]]; then php testNullTypes.php; fi
+  - if [[ $TRAVIS_PHP_VERSION = hhv* ]]; then hhvm --php testNullTypes.php; fi
   
