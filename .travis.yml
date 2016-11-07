@@ -94,9 +94,7 @@ services:
 
 before_script:
   # Make sure all dev dependencies are installed
-  - composer install
-  - composer update
-  - composer dump-autoload
+  #- composer install # only needed for phptimer
   - if [[ $TRAVIS_PHP_VERSION != hhv* ]]; then php -r 'ini_set("hhvm.php7.all", 1);'; fi
   - if [[ $HHVMPHP7 == "yes" ]]; then echo hhvm.php7.all=1 >> /etc/hhvm/php.ini; fi
 
