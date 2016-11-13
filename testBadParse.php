@@ -9,4 +9,4 @@ if (!is_array($strings))
 $strings = array();
 }
 
-var_dump($strings;);
+var_dump($strings);
