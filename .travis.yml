@@ -63,7 +63,7 @@ script:
   #- if [[ $TRAVIS_PHP_VERSION = hhv* ]]; then hhvm --php testBadParse.php; fi
   #- if [[ $TRAVIS_PHP_VERSION != hhv* ]]; then php testDateTime.php; fi
   #- if [[ $TRAVIS_PHP_VERSION = hhv* ]]; then hhvm --php testDateTime.php; fi
-  - if [[ $TRAVIS_PHP_VERSION != hhv* ]]; then php testInstanceof.php; fi
-  - if [[ $TRAVIS_PHP_VERSION = hhv* ]]; then hhvm --php testInstanceof.php; fi
-  - if [[ $TRAVIS_PHP_VERSION != hhv* ]]; then php testScope.php; fi
-  - if [[ $TRAVIS_PHP_VERSION = hhv* ]]; then hhvm --php testScope.php; fi
+  #- if [[ $TRAVIS_PHP_VERSION != hhv* ]]; then php testInstanceof.php; fi
+  #- if [[ $TRAVIS_PHP_VERSION = hhv* ]]; then hhvm --php testInstanceof.php; fi
+  - if [[ $TRAVIS_PHP_VERSION != hhv* ]]; then php testScopes.php; fi
+  - if [[ $TRAVIS_PHP_VERSION = hhv* ]]; then hhvm --php testScopes.php; fi
